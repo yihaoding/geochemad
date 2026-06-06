@@ -1,0 +1,18 @@
+# GeoChemAD — runtime dependencies
+# Versions are lower bounds matching the reference `geochem` conda env
+# (torch 2.6.0+cu124, sklearn 1.7.2, numpy 2.2.6, pandas 2.3.3, scipy 1.15.3).
+
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+torch>=2.0          # T1 / T2 / T3 neural models (CUDA optional; CPU works)
+matplotlib>=3.6
+tqdm>=4.65
+pykrige>=1.7        # kriging interpolation (preprocess/kriging_interp.py)
+
+# Interpolation / compositional preprocessing (preprocess/_vendor + VAE patches)
+shapely>=2.0
+pyproj>=3.4
+scikit-bio>=0.5    # skbio.stats.composition (clr / ilr)
+Pillow>=9.0        # patch image handling (baselines/vae/generate_vae_patches.py)

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Experiment artifacts (never commit — regenerate from configs)
+outputs/
+outputs_*/
+logs/
+*.pt
+*.ckpt
+*.npy
+*.npz
+checkpoints/
+vae_patches*/
+scores/
+*.log
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store

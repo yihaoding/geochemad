@@ -1,0 +1,170 @@
+{
+  "_comment": "LLM (Claude) selected features per area. Rationale: remove oxide duplicates (keep _ppm, drop _pct/_oxide equivalents), remove lab artifacts (LABnegNR_N, H2Oneg/pos, SO3_pct), then select target-relevant pathfinder suites.",
+  "_deduplication_rules": "Keep _ppm over _pct oxide forms. Keep LOI_pct, CO2_pct, S_pct, FeO_pct as independent geochemical indicators. Drop: Al2O3_pct, BaO_ppm, CaO_pct, CeO2_ppm, Cr2O3_ppm, Cs2O_ppm, Dy2O3_ppm, Er2O3_ppm, Eu2O3_ppm, Fe2O3_pct, Fe2O3T_pct, Ga2O3_ppm, Gd2O3_ppm, H2Oneg_pct, H2Opos_pct, Ho2O3_ppm, K2O_pct, La2O3_ppm, LABnegNR_N, Li2O_ppm, Lu2O3_ppm, MgO_pct, MnO_pct, Na2O_pct, Nb2O5_ppm, Nd2O3_ppm, P2O5_pct, Pr2O3_ppm, Rb2O_ppm, Sb2O5_ppm, SiO2_pct, Sm2O3_ppm, SO3_pct, SrO_ppm, Ta2O5_ppm, Tb2O3_ppm, ThO2_ppm, TiO2_pct, Tm2O3_ppm, U3O8_ppm, V2O5_ppm, WO3_ppm, Y2O3_ppm, Yb2O3_ppm, ZnO_ppm, ZrO2_ppm",
+
+  "area1_sed1_au": [
+    "Au_ppm", "Ag_ppm", "As_ppm", "Sb_ppm", "Te_ppm", "Bi_ppm", "Se_ppm", "Hg_ppm", "Tl_ppm",
+    "Cu_ppm", "Pb_ppm", "Zn_ppm", "Mo_ppm", "W_ppm",
+    "S_pct", "FeO_pct", "LOI_pct", "CO2_pct",
+    "K_ppm", "Na_ppm", "Ca_ppm", "Mg_ppm", "Fe_ppm", "Si_ppm", "Al_ppm", "Ti_ppm", "Mn_ppm",
+    "Ba_ppm", "Rb_ppm", "Sr_ppm", "Th_ppm", "U_ppm", "Zr_ppm",
+    "La_ppm", "Ce_ppm", "Nd_ppm",
+    "Pd_ppb", "Pt_ppb",
+    "Ni_ppm", "Co_ppm", "Cr_ppm", "V_ppm", "Sc_ppm",
+    "B_ppm", "F_ppm"
+  ],
+
+  "area2_sed2_cu": [
+    "Cu_ppm", "Mo_ppm", "Zn_ppm", "Pb_ppm", "Ag_ppm", "Au_ppm", "Re_ppm",
+    "As_ppm", "Sb_ppm", "Bi_ppm", "Te_ppm", "Se_ppm", "Cd_ppm",
+    "S_pct", "FeO_pct", "LOI_pct", "CO2_pct",
+    "K_ppm", "Na_ppm", "Ca_ppm", "Mg_ppm", "Fe_ppm", "Si_ppm", "Al_ppm", "Ti_ppm", "Mn_ppm",
+    "Ba_ppm", "Sr_ppm", "Rb_ppm", "Zr_ppm", "Nb_ppm", "V_ppm", "Sc_ppm", "Th_ppm", "U_ppm",
+    "W_ppm", "Sn_ppm", "Co_ppm", "Ni_ppm", "Cr_ppm", "F_ppm", "B_ppm"
+  ],
+
+  "area3_rock1_w": [
+    "W_ppm", "Mo_ppm", "Sn_ppm", "Bi_ppm", "F_ppm", "B_ppm",
+    "Cu_ppm", "Pb_ppm", "Zn_ppm", "As_ppm", "Ag_ppm",
+    "Ca_ppm", "Mg_ppm", "CO2_pct", "FeO_pct", "S_pct", "LOI_pct",
+    "K_ppm", "Rb_ppm", "Cs_ppm", "Na_ppm", "Al_ppm", "Li_ppm", "Si_ppm",
+    "Fe_ppm", "Mn_ppm", "Ti_ppm",
+    "Nb_ppm", "Ta_ppm", "Zr_ppm", "Hf_ppm", "Y_ppm", "La_ppm", "Ce_ppm", "Yb_ppm",
+    "U_ppm", "Th_ppm", "Sc_ppm", "V_ppm", "Ba_ppm", "Sr_ppm"
+  ],
+
+  "area4_rock2_au": [
+    "Au_ppm", "As_ppm", "Sb_ppm", "Bi_ppm", "Te_ppm", "Ag_ppm", "Hg_ppm", "Tl_ppm",
+    "W_ppm", "Mo_ppm", "Se_ppm",
+    "S_pct", "FeO_pct", "LOI_pct", "CO2_pct",
+    "Cu_ppm", "Pb_ppm", "Zn_ppm",
+    "Fe_ppm", "Al_ppm", "K_ppm", "Si_ppm", "Mn_ppm", "Ti_ppm", "Ca_ppm", "Mg_ppm",
+    "Ba_ppm", "Rb_ppm", "Sr_ppm", "Th_ppm", "U_ppm", "Zr_ppm",
+    "La_ppm", "Ce_ppm", "Nd_ppm",
+    "Ni_ppm", "Co_ppm", "Cr_ppm", "V_ppm", "Sc_ppm",
+    "B_ppm", "F_ppm"
+  ],
+
+  "area5_rock3_cu": [
+    "Cu_ppm", "Mo_ppm", "Zn_ppm", "Pb_ppm", "Ag_ppm", "Au_ppm", "Re_ppm",
+    "As_ppm", "Sb_ppm", "Bi_ppm", "Te_ppm", "Se_ppm", "Cd_ppm",
+    "S_pct", "FeO_pct", "LOI_pct", "CO2_pct",
+    "K_ppm", "Na_ppm", "Ca_ppm", "Mg_ppm", "Fe_ppm", "Si_ppm", "Al_ppm", "Ti_ppm", "Mn_ppm",
+    "Ba_ppm", "Sr_ppm", "Rb_ppm", "Zr_ppm", "Nb_ppm", "V_ppm", "Sc_ppm", "Th_ppm", "U_ppm",
+    "W_ppm", "Sn_ppm", "Co_ppm", "Ni_ppm", "Cr_ppm", "F_ppm", "B_ppm"
+  ],
+
+  "area6_soil1_au": [
+    "Au_ppm", "Ag_ppm", "As_ppm", "Sb_ppm", "Te_ppm", "Bi_ppm", "Se_ppm", "Hg_ppm", "Tl_ppm",
+    "Cu_ppm", "Pb_ppm", "Zn_ppm", "Mo_ppm", "W_ppm",
+    "S_pct", "FeO_pct", "LOI_pct", "CO2_pct",
+    "K_ppm", "Na_ppm", "Ca_ppm", "Mg_ppm", "Fe_ppm", "Si_ppm", "Al_ppm", "Ti_ppm", "Mn_ppm",
+    "Ba_ppm", "Rb_ppm", "Sr_ppm", "Th_ppm", "U_ppm", "Zr_ppm",
+    "La_ppm", "Ce_ppm", "Nd_ppm",
+    "Pd_ppb", "Pt_ppb",
+    "Ni_ppm", "Co_ppm", "Cr_ppm", "V_ppm", "Sc_ppm",
+    "B_ppm", "F_ppm"
+  ],
+
+  "area7_soil2_au": [
+    "Au_ppm", "Ag_ppm", "As_ppm", "Sb_ppm", "Te_ppm", "Bi_ppm", "Se_ppm", "Hg_ppm", "Tl_ppm",
+    "Cu_ppm", "Pb_ppm", "Zn_ppm", "Mo_ppm", "W_ppm",
+    "S_pct", "FeO_pct", "LOI_pct", "CO2_pct",
+    "K_ppm", "Na_ppm", "Ca_ppm", "Mg_ppm", "Fe_ppm", "Si_ppm", "Al_ppm", "Ti_ppm", "Mn_ppm",
+    "Ba_ppm", "Rb_ppm", "Sr_ppm", "Th_ppm", "U_ppm", "Zr_ppm",
+    "La_ppm", "Ce_ppm", "Nd_ppm",
+    "Pd_ppb", "Pt_ppb",
+    "Ni_ppm", "Co_ppm", "Cr_ppm", "V_ppm", "Sc_ppm",
+    "B_ppm", "F_ppm"
+  ],
+
+  "area8_soil3_ni": [
+    "Ni_ppm", "Co_ppm", "Cr_ppm", "Mg_ppm", "Cu_ppm",
+    "Pd_ppb", "Pt_ppb", "Ir_ppb", "Ru_ppb", "Os_ppb", "Rh_ppb",
+    "Fe_ppm", "Ca_ppm", "Ti_ppm", "Mn_ppm", "Sc_ppm", "V_ppm", "P_ppm",
+    "S_pct", "As_ppm", "Sb_ppm", "Se_ppm", "Te_ppm",
+    "Si_ppm", "Al_ppm", "K_ppm", "Na_ppm", "LOI_pct", "FeO_pct",
+    "Zr_ppm", "Nb_ppm", "La_ppm", "Ce_ppm", "Ba_ppm", "Th_ppm"
+  ],
+
+  "area9_dh1_au": [
+    "Au_ppm", "Ag_ppm", "As_ppm", "Sb_ppm", "Te_ppm", "Bi_ppm", "Se_ppm", "Hg_ppm", "Tl_ppm",
+    "Cu_ppm", "Pb_ppm", "Zn_ppm", "Mo_ppm", "W_ppm",
+    "S_pct", "FeO_pct", "LOI_pct", "CO2_pct",
+    "K_ppm", "Na_ppm", "Ca_ppm", "Mg_ppm", "Fe_ppm", "Si_ppm", "Al_ppm", "Ti_ppm", "Mn_ppm",
+    "Ba_ppm", "Rb_ppm", "Sr_ppm", "Th_ppm", "U_ppm", "Zr_ppm",
+    "La_ppm", "Ce_ppm", "Nd_ppm",
+    "Pd_ppb", "Pt_ppb",
+    "Ni_ppm", "Co_ppm", "Cr_ppm", "V_ppm", "Sc_ppm",
+    "B_ppm", "F_ppm"
+  ],
+
+  "area10_dh2_ag": [
+    "Ag_ppm", "Au_ppm", "Pb_ppm", "Zn_ppm", "Cu_ppm", "In_ppm", "Cd_ppm",
+    "As_ppm", "Sb_ppm", "Bi_ppm", "Te_ppm", "Tl_ppm", "Hg_ppm", "Se_ppm",
+    "S_pct", "FeO_pct", "Mo_ppm", "W_ppm", "Re_ppm",
+    "Fe_ppm", "Si_ppm", "Al_ppm", "Ca_ppm", "Mg_ppm", "K_ppm", "Na_ppm", "Mn_ppm", "Ti_ppm",
+    "LOI_pct", "CO2_pct", "Ba_ppm", "Rb_ppm", "Sr_ppm", "Zr_ppm", "Sn_ppm"
+  ],
+
+  "area11_geo1_au": [
+    "Au_ppm", "Ag_ppm", "As_ppm", "Sb_ppm", "Te_ppm", "Bi_ppm", "Se_ppm", "Hg_ppm", "Tl_ppm",
+    "Cu_ppm", "Pb_ppm", "Zn_ppm", "Mo_ppm", "W_ppm",
+    "S_pct", "FeO_pct", "LOI_pct", "CO2_pct",
+    "K_ppm", "Na_ppm", "Ca_ppm", "Mg_ppm", "Fe_ppm", "Si_ppm", "Al_ppm", "Ti_ppm", "Mn_ppm",
+    "Ba_ppm", "Rb_ppm", "Sr_ppm", "Th_ppm", "U_ppm", "Zr_ppm",
+    "La_ppm", "Ce_ppm", "Nd_ppm",
+    "Pd_ppb", "Pt_ppb",
+    "Ni_ppm", "Co_ppm", "Cr_ppm", "V_ppm", "Sc_ppm",
+    "B_ppm", "F_ppm"
+  ],
+
+  "area12_geo2_cu": [
+    "Cu_ppm", "Mo_ppm", "Zn_ppm", "Pb_ppm", "Ag_ppm", "Au_ppm", "Re_ppm",
+    "As_ppm", "Sb_ppm", "Bi_ppm", "Te_ppm", "Se_ppm", "Cd_ppm",
+    "S_pct", "FeO_pct", "LOI_pct", "CO2_pct",
+    "K_ppm", "Na_ppm", "Ca_ppm", "Mg_ppm", "Fe_ppm", "Si_ppm", "Al_ppm", "Ti_ppm", "Mn_ppm",
+    "Ba_ppm", "Sr_ppm", "Rb_ppm", "Zr_ppm", "Nb_ppm", "V_ppm", "Sc_ppm", "Th_ppm", "U_ppm",
+    "W_ppm", "Sn_ppm", "Co_ppm", "Ni_ppm", "Cr_ppm", "F_ppm", "B_ppm"
+  ],
+
+  "area13_geo3_ni": [
+    "Ni_ppm", "Co_ppm", "Cr_ppm", "Mg_ppm", "Cu_ppm",
+    "Pd_ppb", "Pt_ppb", "Ir_ppb", "Ru_ppb", "Os_ppb", "Rh_ppb",
+    "Fe_ppm", "Ca_ppm", "Ti_ppm", "Mn_ppm", "Sc_ppm", "V_ppm", "P_ppm",
+    "S_pct", "As_ppm", "Sb_ppm", "Se_ppm", "Te_ppm",
+    "Si_ppm", "Al_ppm", "K_ppm", "Na_ppm", "LOI_pct", "FeO_pct",
+    "Zr_ppm", "Nb_ppm", "La_ppm", "Ce_ppm", "Ba_ppm", "Th_ppm"
+  ],
+
+  "area14_geo4_w": [
+    "W_ppm", "Mo_ppm", "Sn_ppm", "Bi_ppm", "F_ppm", "B_ppm",
+    "Cu_ppm", "Pb_ppm", "Zn_ppm", "As_ppm", "Ag_ppm",
+    "Ca_ppm", "Mg_ppm", "CO2_pct", "FeO_pct", "S_pct", "LOI_pct",
+    "K_ppm", "Rb_ppm", "Cs_ppm", "Na_ppm", "Al_ppm", "Li_ppm", "Si_ppm",
+    "Fe_ppm", "Mn_ppm", "Ti_ppm",
+    "Nb_ppm", "Ta_ppm", "Zr_ppm", "Hf_ppm", "Y_ppm", "La_ppm", "Ce_ppm", "Yb_ppm",
+    "U_ppm", "Th_ppm", "Sc_ppm", "V_ppm", "Ba_ppm", "Sr_ppm"
+  ],
+
+  "area15_sed3_au": [
+    "AU", "AG", "AS_O", "SB", "BI", "SE", "HG", "TL", "TE",
+    "CU", "PB", "ZN", "MO", "W",
+    "S", "CO2_IN", "C_ORG",
+    "K", "NA", "CA", "MG", "FE", "SI", "AL", "TI", "MN",
+    "BA", "RB", "SR", "TH", "U", "ZR",
+    "LA", "CE", "ND",
+    "PD", "PT",
+    "NI", "CO", "CR", "V", "SC",
+    "B", "F"
+  ],
+
+  "area16_sed4_cu": [
+    "CU", "MO", "ZN", "PB", "AG", "AU", "RE",
+    "AS_O", "SB", "BI", "TE", "SE", "CD",
+    "S", "CO2_IN", "C_ORG",
+    "K", "NA", "CA", "MG", "FE", "SI", "AL", "TI", "MN",
+    "BA", "SR", "RB", "ZR", "NB", "V", "SC", "TH", "U",
+    "W", "SN", "CO", "NI", "CR", "F", "B"
+  ]
+}
