@@ -59,8 +59,9 @@ The attention-based score beats the T2 paper baseline on 7/10 areas, and
 beats T1-aligned reconstruction on 7/10 areas. Their fusion
 (`FUSE(attn ⊕ ICDM-T1-aln) = rank-mean`) reaches mean AUC **0.699**.
 
-Reference SLURM script: `scripts/slurm/run_icdm_aligned_input_sed1.sh`
-(area-specific paths only; method config is identical across the 10 areas).
+Reference SLURM script: [`slurm/run_t3_icdm.sh`](../slurm/run_t3_icdm.sh)
+(edit the `AREA` / CSV paths at the top for each run; method config is
+identical across the 10 areas).
 
 ## What the recipe actually is
 
@@ -304,11 +305,11 @@ metrics.json):
 
 ## Code + data pointers (attention-score path)
 
-- Extractor:  `scripts/icdm/extract_attention_v3.py`
-- Eval:       `scripts/icdm/eval_attention_scores.py`
-- Ranking:    `scripts/icdm/rank_unified_attn.py`
-- Fusion:     `scripts/icdm/fuse_t1_attn.py`
-- Master table: `scripts/icdm/compile_paper_table_with_attn.py`
+- Extractor:  [`models/t3_icdm/extract_attention_v3.py`](../models/t3_icdm/extract_attention_v3.py)
+- Eval:       [`models/t3_icdm/eval_attention_scores.py`](../models/t3_icdm/eval_attention_scores.py)
+- Ranking:    [`models/t3_icdm/rank_unified_attn.py`](../models/t3_icdm/rank_unified_attn.py)
+- Fusion:     [`models/t3_icdm/fuse_t1_attn.py`](../models/t3_icdm/fuse_t1_attn.py)
+- Master table: [`models/t3_icdm/compile_paper_table_with_attn.py`](../models/t3_icdm/compile_paper_table_with_attn.py)
 - All 24-variant outputs live under
   `outputs_icdm_aligned_input/<area>/attn/attn_*.csv` +
   `attn_metrics.json`. The unified variant used in the paper is
